@@ -1,0 +1,43 @@
+@import '../../styles/variables';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins/breakpoints';
+
+@mixin boxShadow($color, $blur) {
+  box-shadow: 0 0 $blur 0 $color;
+}
+
+.answerList {
+  list-style-type: none;
+  padding: 0;
+  min-height: 24px;
+}
+
+.singleBox {
+  width: 20px;
+  text-align: center;
+  line-height: 20px;
+  height: 20px;
+  margin: 0 6px;
+  border-radius: 6px;
+
+  @include media-breakpoint-up(md) {
+    margin: 0 12px;
+  }
+
+  &__green {
+    @extend .singleBox;
+    background-color: $green;
+    pointer-events: none;
+    user-select: none;
+    color: $dark;
+    font-weight: 700;
+    @include boxShadow($color: $primaryColor, $blur: 7px);
+  }
+
+  &__red {
+    @extend .singleBox__green;
+    background-color: $danger;
+    @include boxShadow($color: $danger, $blur: 7px);
+  }
+}

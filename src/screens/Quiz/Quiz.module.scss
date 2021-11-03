@@ -1,0 +1,20 @@
+@import '../../styles/variables';
+
+.logo {
+  text-shadow: 0 0 7px $primaryColor;
+  text-transform: uppercase;
+  font-size: 60px;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-top: 12px;
+  &::first-letter {
+    font-size: 70px;
+  }
+}
+
+.anotherCategoryLink {
+  position: absolute;
+  top: 6px;
+  left: 12px;
+  color: #fff;
+}

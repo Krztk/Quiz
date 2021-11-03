@@ -1,0 +1,17 @@
+@import '../../styles/variables';
+
+.button {
+  border: none;
+  height: 40px;
+  color: #fff;
+  border-radius: 6px;
+  outline: none;
+  transition: 300ms ease-in-out;
+  transform: scaleX(0.95);
+  width: 100%;
+  max-width: 300px;
+  background: $primaryColor;
+  &:hover {
+    transform: scaleX(1);
+  }
+}
